@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db:
+    build: .
+    ports:
+        - "1433:1433"
+    environment:
+        ACCEPT_EULA: "Y"
+        SA_PASSWORD: "pass123ABC"
+        BACKUP_NAME: backup.bacpac
+        DB_NAME: <yourBackedUpDbName>
+    container_name: mssqldev
