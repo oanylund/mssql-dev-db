@@ -17,3 +17,14 @@ Steps:
 - mssql server should now be available on port 1433
 - To rebuild use `docker-compose build`
 
+### Utility scripts
+
+#### createbackup.sh:
+
+Creates a new backup inside the container and then copies it out to the host into the ./backup folder.
+
+Usage: `./createbackup.sh {backupname}` 
+
+{backupname} you replace with the name you want for the backup. For example `./createbackup.sh mybackup`
+
+Then a new backup will created as ./backup/mybackup.bacpac in your repo folder
